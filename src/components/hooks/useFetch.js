@@ -23,8 +23,8 @@ const useFetch = (url) => {
                 
             }).catch((err)=>{
                 setIsLoading(false)
-                // setError("Opps... Network error. Do not worry it's our fault. Try Refreshing")
-                setData(dummy.products)
+                setError("Opps... Network error. Do not worry it's our fault. Try Refreshing")
+                // setData(dummy.products)
               })
         
         
