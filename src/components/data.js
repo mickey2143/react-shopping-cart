@@ -144,3 +144,7 @@ export const dummy = { products: [
       },
     ]
     }
+
+export const cate = {
+  data:["smartphones","smatphones","smaones"]
+}

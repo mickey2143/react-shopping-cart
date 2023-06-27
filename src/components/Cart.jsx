@@ -15,7 +15,7 @@ const Cart = () => {
     <>
       <div
         onClick={handleClick}
-        className="text-xl flex items-center justify-center gap-2 select-none cursor-pointer"
+        className="relative text-xl flex items-center justify-center gap-2 select-none cursor-pointer"
       >
         <p className="font-normal text-xl">cart</p>
         <span className="w-4 h-4 p-3 rounded-full flex items-center justify-center bg-black text-white text-sm">
@@ -26,9 +26,9 @@ const Cart = () => {
         <>
           <div onClick={()=>alert("click")} className="fixed top-0 right-0 opacity-50 bg-black h-full w-full" ></div>
 
-          <div className="fixed top-0 right-0 w-full h-full flex justify-center items-center">
-            <div className="max-w-md w-full bg-white rounded-lg mx-auto">
-              <div className="px-7 py-3 overflow-auto ">
+          <div className="fixed right-0 w-full h-full flex justify-center items-center">
+            <div className="max-w-md w-full bg-white h-screen rounded-lg mx-auto">
+              <div className="px-7 py-5 overflow-auto h-full" id="tiny-scrollbar">
                 <div className="flex justify-between items-center mb-4">
                   <h2>Checkout</h2>
                   <span
@@ -40,7 +40,7 @@ const Cart = () => {
                 </div>
 
                 {
-                  cart.map((pro,inx)=>( <CartProducts key={inx} product={pro} />))
+                 cart && cart.map((pro,inx)=>( <CartProducts key={inx} product={pro} />))
                 }
                 
                   

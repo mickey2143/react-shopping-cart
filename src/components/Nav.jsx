@@ -1,7 +1,7 @@
 import SearchBox from "./SearchBox";
 import Cart from "./Cart";
 import logo from "../assets/shopit.png"
-const Nav = ({ search = "" }) => {
+const Nav = ({ search}) => {
   return (
     <nav
       className="w-full shadow-md z-10 space-x-5 px-3 h-20 flex  bg-white sticky justify-between top-0 items-center 

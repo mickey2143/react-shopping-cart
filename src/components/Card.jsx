@@ -8,7 +8,7 @@ const Card = ({data}) => {
    
   return (
     <div className="bg-white shadow-xl flex justify-center w-64 rounded-xl flex-col py-5">
-    <div className='w-full flex items-center justify-center '>
+    <div className='w-full flex items-center justify-center select-none'>
         
         <img src={data.images[0]} alt=""  className="w-32 "/>
        
@@ -23,7 +23,7 @@ const Card = ({data}) => {
         <span>
             {data.rating}
         </span>
-        <span  onClick={()=>addOneToCart(data.id)} className="select-none text-center cursor-pointer px-4 py-2 flex justify-center  bg-black text-white items-center rounded-3xl">
+        <span  onClick={()=>addOneToCart(data.id)} className="select-none text-center cursor-pointer px-4 py-2 flex justify-center  hover:bg-black hover:text-white border border-black items-center rounded-3xl">
            {data.cart ? "Check Out":"Add to Cart"}
         </span>
     </div>
